@@ -1,0 +1,137 @@
+type: edu
+files:
+  - name: test/my/exercise/Tests.kt
+    visible: false
+    text: |-
+      package my.exercise
+      
+      import kotlinx.coroutines.*
+      import kotlinx.coroutines.withTimeout
+      import net.jqwik.api.ForAll
+      import net.jqwik.api.Property
+      import org.junit.Assert
+      import org.junit.Assert.assertEquals
+      import java.lang.AssertionError
+      import java.lang.RuntimeException
+      import java.util.concurrent.CompletableFuture
+      import kotlin.time.Duration.Companion.seconds
+      
+      class Test {
+          @Property(tries = 20)
+          fun testHello(
+                  @ForAll data: String
+          ): Unit = runBlocking {
+              val actual = MyLegacyAPI {
+                  it.call(data, null)
+                  CompletableFuture.runAsync { }
+              }.fetch()
+              assertEquals(data, actual)
+          }
+      
+          @Property(tries = 20)
+          fun testException(
+                  @ForAll message: String
+          ): Unit = runBlocking {
+              val actual = runCatching {
+                  MyLegacyAPI {
+                      it.call(null, RuntimeException(message))
+                      CompletableFuture.runAsync { }
+                  }.fetch()
+              }
+              assertEquals(message, actual.exceptionOrNull()?.message)
+          }
+      
+          @Property(tries = 5)
+          fun testCancellation(
+                  @ForAll message: String
+          ): Unit = runBlocking {
+              val completableFuture = CompletableFuture<Void?>()
+              val job = launch(start = CoroutineStart.UNDISPATCHED) {
+                  MyLegacyAPI {
+                      completableFuture
+                  }.fetch()
+              }
+              delay(500)
+              job.cancel()
+              withTimeoutOrNull(2.seconds) {
+                  var isTrue = false
+                  do {
+                      isTrue = completableFuture.isCancelled
+                      yield()
+                  } while (!isTrue)
+              } ?: throw AssertionError("LegacyAPI's Future was not cancelled")
+          }
+      }
+    learner_created: false
+  - name: src/my/exercise/MyLegacyAPI.java
+    visible: true
+    text: |
+      package my.exercise;
+      
+      import java.util.concurrent.Future;
+      
+      public interface MyLegacyAPI {
+      
+          /**
+           * Fetches data from remote API.
+           *
+           * @param callback to be called when data is fetched or error occurs.
+           * @return Future, cancelling it will cancel the request
+           */
+          Future<Void> fetchData(Callback callback);
+      
+          @FunctionalInterface
+          interface Callback {
+              /**
+               * Called when data is fetched or error occurs.
+               * Either data or exception will be null.
+               *
+               * @param data      if not null, contains fetched data
+               * @param exception if not null, contains exception that occurred
+               */
+              void call(String data, Throwable exception);
+          }
+      }
+    learner_created: false
+  - name: src/my/exercise/Task.kt
+    visible: true
+    placeholders:
+      - offset: 566
+        length: 63
+        placeholder_text: // resume the continuation
+        initial_state:
+          length: 26
+          offset: 313
+        initialized_from_dependency: false
+        selected: true
+        status: Unchecked
+        encrypted_possible_answer: |-
+          if (data != null) cont.resume(data)
+                          else cont.resumeWithException(exception)
+      - offset: 802
+        length: 32
+        placeholder_text: // cancel the future
+        initial_state:
+          length: 20
+          offset: 366
+        initialized_from_dependency: false
+        selected: true
+        status: Unchecked
+        encrypted_possible_answer: "cont.invokeOnCancellation { future.cancel(true) }"
+    text: |
+      package my.exercise
+      
+      import kotlinx.coroutines.suspendCancellableCoroutine
+      import kotlin.coroutines.resume
+      import kotlin.coroutines.resumeWithException
+      
+      suspend fun MyLegacyAPI.fetch(): String =
+              suspendCancellableCoroutine { cont ->
+                  val future = fetchData { data, exception ->
+                      // resume the continuation
+                  }
+                  // cancel the future
+              }
+    learner_created: false
+status: Unchecked
+record: -1

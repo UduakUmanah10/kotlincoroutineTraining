@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="my.exercise.Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-26T00:07:32" hostname="UDUAK" time="1.11">
+  <properties/>
+  <testcase name="testHello" classname="my.exercise.Test" time="0.862"/>
+  <testcase name="testCancellation" classname="my.exercise.Test" time="0.152"/>
+  <system-out><![CDATA[timestamp = 2024-01-26T01:07:33.105869400, Test:testHello = 
+                              |--------------------jqwik--------------------
+tries = 20                    | # of calls to property
+checks = 20                   | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 3          | # of all combined edge cases
+edge-cases#tried = 3          | # of edge cases tried in current run
+seed = 6484525596724334272    | random seed to reproduce generated values
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

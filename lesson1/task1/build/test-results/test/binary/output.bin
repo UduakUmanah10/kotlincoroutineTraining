@@ -1,0 +1,13 @@
+>timestamp = 2024-01-26T01:07:33.105869400, Test:testHello = 
+N                              |--------------------jqwik--------------------
+8tries = 20                    | # of calls to property
+9checks = 20                   | # of not rejected calls
+Cgeneration = RANDOMIZED       | parameters are randomly generated
+7after-failure = PREVIOUS_SEED | use the previous seed
+Cwhen-fixed-seed = ALLOW       | fixing the random seed is allowed
+9edge-cases#mode = MIXIN       | edge cases are mixed in
+>edge-cases#total = 3          | # of all combined edge cases
+Fedge-cases#tried = 3          | # of edge cases tried in current run
+Kseed = 6484525596724334272    | random seed to reproduce generated values
+
+

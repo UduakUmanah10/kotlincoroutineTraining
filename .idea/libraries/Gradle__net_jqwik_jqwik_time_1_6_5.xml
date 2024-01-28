@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: net.jqwik:jqwik-time:1.6.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="net.jqwik" artifactId="jqwik-time" version="1.6.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jqwik/jqwik-time/1.6.5/779be5a8105568da55297883b101f24e60fb5155/jqwik-time-1.6.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jqwik/jqwik-time/1.6.5/612b1937b696fd0682226dd8da9a7fd3125b1a9/jqwik-time-1.6.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

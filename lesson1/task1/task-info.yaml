@@ -1,0 +1,71 @@
+type: edu
+files:
+  - name: test/my/exercise/Tests.kt
+    visible: false
+    text: |-
+      package my.exercise
+      
+      import kotlinx.coroutines.Dispatchers
+      import kotlinx.coroutines.cancelAndJoin
+      import kotlinx.coroutines.launch
+      import kotlinx.coroutines.runBlocking
+      import net.jqwik.api.ForAll
+      import net.jqwik.api.Property
+      import org.junit.Assert.assertEquals
+      import org.junit.Rule
+      import org.junit.Test
+      import org.junit.rules.Timeout
+      import java.util.concurrent.TimeUnit
+      
+      
+      class Test {
+          @JvmField
+          @Rule
+          var globalTimeout = Timeout(5, TimeUnit.SECONDS)
+      
+          @Property(tries = 20)
+          fun testHello(@ForAll data: String): Unit = runBlocking {
+              assertEquals(cancellable(data), data.reversed())
+          }
+      
+          @Test
+          fun testCancellation(): Unit = runBlocking {
+              launch(Dispatchers.Default) {
+                  while (true) {
+                      cancellable("data")
+                  }
+              }.cancelAndJoin()
+          }
+      }
+    learner_created: false
+  - name: src/my/exercise/Task.kt
+    visible: true
+    placeholders:
+      - offset: 312
+        length: 28
+        placeholder_text: // Insert cancellation check
+        initial_state:
+          length: 28
+          offset: 191
+        initialized_from_dependency: false
+        selected: true
+        status: Solved
+        encrypted_possible_answer: coroutineContext.ensureActive()
+    text: |
+      package my.exercise
+      
+      import kotlinx.coroutines.ensureActive
+      import kotlin.coroutines.coroutineContext
+      
+      
+      suspend fun cancellable(input: String): String {
+          val result = input.reversed()
+          // Insert cancellation check
+          return result
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 26 Jan 2024 00:07:33 UTC"
+record: -1

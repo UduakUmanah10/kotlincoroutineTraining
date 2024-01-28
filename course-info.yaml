@@ -1,0 +1,13 @@
+title: Advanced Coroutines
+language: English
+summary: Advanced Coroutines
+programming_language: Kotlin
+content:
+  - lesson1
+  - lesson2
+  - lesson3
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_1_8
+vendor:
+  name: Simon Vergauwen

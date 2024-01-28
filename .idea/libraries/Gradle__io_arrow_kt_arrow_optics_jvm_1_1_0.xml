@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.arrow-kt:arrow-optics-jvm:1.1.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.arrow-kt" artifactId="arrow-optics-jvm" version="1.1.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-optics-jvm/1.1.0/5fc5f912c39d76cf08f06ccb21f3b50ec047afc2/arrow-optics-jvm-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-optics-jvm/1.1.0/bf9e00c838b49708045e902a561e4bc906679428/arrow-optics-jvm-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

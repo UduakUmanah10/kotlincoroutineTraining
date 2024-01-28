@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: net.jqwik:jqwik-api:1.6.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="net.jqwik" artifactId="jqwik-api" version="1.6.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jqwik/jqwik-api/1.6.5/e06d56fad5e42d6e9f1f8388359278b9c5fd7a3c/jqwik-api-1.6.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jqwik/jqwik-api/1.6.5/1b5723ac00d7ebc4d28d301c21292770c69cbac1/jqwik-api-1.6.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

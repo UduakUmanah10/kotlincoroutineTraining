@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.nomisrev:kotlinx-serialization-jsonpath-jvm:0.1.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.github.nomisrev" artifactId="kotlinx-serialization-jsonpath-jvm" version="0.1.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.nomisrev/kotlinx-serialization-jsonpath-jvm/0.1.0/dfc9e68dcb907d4d21ddcb89a48f40990d42ce7f/kotlinx-serialization-jsonpath-jvm-0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.nomisrev/kotlinx-serialization-jsonpath-jvm/0.1.0/f6f59b89e93798b55fefb4c673f433a6ce0c1e/kotlinx-serialization-jsonpath-jvm-0.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

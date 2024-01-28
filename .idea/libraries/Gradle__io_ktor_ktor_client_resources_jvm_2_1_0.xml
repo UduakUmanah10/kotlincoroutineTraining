@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.ktor:ktor-client-resources-jvm:2.1.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.ktor" artifactId="ktor-client-resources-jvm" version="2.1.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-resources-jvm/2.1.0/c27c345287afa17fe99915e3c7b82b2a4b117154/ktor-client-resources-jvm-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-resources-jvm/2.1.0/722ebe0eb18c4c8e38cdeac3ea44cc195c174d0c/ktor-client-resources-jvm-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
