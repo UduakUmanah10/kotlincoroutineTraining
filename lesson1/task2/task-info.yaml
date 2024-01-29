@@ -96,7 +96,7 @@ files:
   - name: src/my/exercise/Task.kt
     visible: true
     placeholders:
-      - offset: 566
+      - offset: 554
         length: 63
         placeholder_text: // resume the continuation
         initial_state:
@@ -108,7 +108,7 @@ files:
         encrypted_possible_answer: |-
           if (data != null) cont.resume(data)
                           else cont.resumeWithException(exception)
-      - offset: 802
+      - offset: 790
         length: 32
         placeholder_text: // cancel the future
         initial_state:

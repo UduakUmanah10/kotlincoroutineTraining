@@ -14,10 +14,10 @@ fun TestSyntax.default(): Unit =
             }
             launch {
                 delay(1000)
-                expect(/* Order of occurrence */)
+                expect(2)
                 throw RuntimeException("Boom")
             }
-            expect(/* Order of occurrence */)
+            expect(1)
         }
-        /* Expect or never */
+        never()
     }
