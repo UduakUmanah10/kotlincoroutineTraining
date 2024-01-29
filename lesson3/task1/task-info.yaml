@@ -86,33 +86,33 @@ files:
     visible: true
     placeholders:
       - offset: 436
-        length: 25
+        length: 1
         placeholder_text: /* Order of occurrence */
         initial_state:
           length: 25
           offset: 436
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
         encrypted_possible_answer: 2
-      - offset: 543
-        length: 25
+      - offset: 519
+        length: 1
         placeholder_text: /* Order of occurrence */
         initial_state:
           length: 25
           offset: 543
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
         encrypted_possible_answer: 1
-      - offset: 588
-        length: 21
+      - offset: 540
+        length: 7
         placeholder_text: /* Expect or never */
         initial_state:
           length: 21
           offset: 588
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
         encrypted_possible_answer: never()
     text: |

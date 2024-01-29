@@ -10,8 +10,8 @@ suspend fun MyLegacyAPI.fetch(): String =
             val future = fetchData { data, exception ->
                 when{
                     data !== null -> cont.resume(data)
-                    exception !==null -> cont.resumeWithException(exception)
-                    else -> cont.resumeWithException(IllegalStateException(""))
+                   // exception !==null -> cont.resumeWithException(exception)
+                    else -> cont.resumeWithException(exception!!)
                 }
                 // resume the continuation puts valid value in the continuation
             }
